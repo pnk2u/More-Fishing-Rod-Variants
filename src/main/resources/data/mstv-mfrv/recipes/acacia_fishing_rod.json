@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "fishing_rods",
+  "key": {
+    "/": {
+      "item": "mstv-base:acacia_stick"
+    },
+    "S": {
+      "item": "minecraft:string"
+    }
+  },
+  "pattern": [
+    "  /",
+    " /S",
+    "/ S"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mstv-mfrv:acacia_fishing_rod"
+  }
+}

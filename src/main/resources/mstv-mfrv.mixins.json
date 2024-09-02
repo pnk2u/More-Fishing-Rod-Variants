@@ -1,0 +1,14 @@
+{
+  "required": false ,
+  "minVersion": "0.8" ,
+  "package": "de.pnku.mstv_mfrv.mixin" ,
+  "compatibilityLevel": "JAVA_21" ,
+  "mixins": [
+    "entity.FishingHookMixin" ,
+    "entity.PigMixin" ,
+    "entity.StriderMixin"
+  ] ,
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

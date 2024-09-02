@@ -1,0 +1,6 @@
+{
+    "parent": "mstv-mfrv:item/crimson_fishing_rod",
+    "textures": {
+        "layer0": "mstv-mfrv:item/crimson_fishing_rod_cast"
+    }
+}

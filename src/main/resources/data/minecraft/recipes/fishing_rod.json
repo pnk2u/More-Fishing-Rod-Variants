@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "fishing_rods",
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "minecraft:string"
+    }
+  },
+  "pattern": [
+    "  #",
+    " #X",
+    "# X"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:fishing_rod"
+  }
+}

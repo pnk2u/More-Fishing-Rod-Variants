@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "carrot_on_a_stick_variants",
+  "key": {
+    "F": {
+      "item": "mstv-mfrv:birch_fishing_rod"
+    },
+    "V": {
+      "item": "minecraft:carrot"
+    }
+  },
+  "pattern": [
+    "F ",
+    " V"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mstv-mfrv:carrot_on_a_birch_stick"
+  }
+}
