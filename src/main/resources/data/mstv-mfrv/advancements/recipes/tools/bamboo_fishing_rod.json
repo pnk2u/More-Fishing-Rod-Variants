@@ -5,10 +5,10 @@
       "conditions": {
         "items": [
           {
-            "items": "minecraft:bamboo"
+            "items": ["minecraft:bamboo"]
           },
           {
-            "items": "minecraft:string"
+            "items": ["minecraft:string"]
           }
         ]
       },

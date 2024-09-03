@@ -1,6 +1,5 @@
 package de.pnku.mstv_mfrv;
 
-import de.pnku.mstv_base.item.MoreStickVariantItems;
 import de.pnku.mstv_mfrv.item.MoreFishingRodVariantItems;
 import net.fabricmc.api.ModInitializer;
 
