@@ -6,6 +6,7 @@ import net.minecraft.world.entity.ai.goal.TemptGoal;
 import net.minecraft.world.entity.animal.Pig;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
@@ -34,8 +35,8 @@ public class PigMixin extends PathfinderMob {
         this.goalSelector.addGoal(4, new TemptGoal(this, 1.2, C_STICK_VARIANTS, false));
     }
 
-    @Redirect(method = "getControllingPassenger", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/player/Player;isHolding(Lnet/minecraft/world/item/Item;)Z"))
-    public boolean redirectedPlayerIsHolding(Player player, Item item) {
-        return more_carrot_on_a_stick_variants.contains(player.getOffhandItem().getItem()) || (more_carrot_on_a_stick_variants.contains(player.getMainHandItem().getItem())) || player.isHolding(Items.CARROT_ON_A_STICK);
+    @Redirect(method = "getControllingPassenger", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;is(Lnet/minecraft/world/item/Item;)Z"))
+    public boolean redirectedPlayerIsHolding(ItemStack stack, Item item) {
+        return more_carrot_on_a_stick_variants.contains(stack.getItem()) || stack.is(Items.CARROT_ON_A_STICK);
     }
 }

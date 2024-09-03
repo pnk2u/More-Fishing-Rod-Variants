@@ -2,14 +2,15 @@ package de.pnku.mstv_mfrv.datagen;
 
 import de.pnku.mstv_mfrv.MoreFishingRodVariants;
 import de.pnku.mstv_base.item.MoreStickVariantItem;
-import de.pnku.mstv_mfrv.item.MoreFishingRodVariantItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+
+import java.util.function.Consumer;
 
 import static de.pnku.mstv_mfrv.item.MoreFishingRodVariantItems.*;
 
@@ -19,7 +20,7 @@ public class MoreFishingRodVariantRecipeGenerator extends FabricRecipeProvider {
     }
 
     @Override
-    public void buildRecipes(RecipeOutput exporter) {
+    public void buildRecipes(Consumer<FinishedRecipe> exporter) {
         for (Item fishingRodItem : more_fishing_rods) {
             Item stickItem = more_fishing_rod_sticks.getOrDefault(fishingRodItem, Items.BAMBOO);
             String stickWood = "bamboo";
