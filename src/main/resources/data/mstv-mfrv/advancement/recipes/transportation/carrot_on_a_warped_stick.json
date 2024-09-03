@@ -5,10 +5,10 @@
       "conditions": {
         "items": [
           {
-            "items": "mstv-mfrv:warped_fishing_rod"
+            "items": ["mstv-mfrv:warped_fishing_rod"]
           },
           {
-            "items": "minecraft:carrot"
+            "items": ["minecraft:carrot"]
           }
         ]
       },

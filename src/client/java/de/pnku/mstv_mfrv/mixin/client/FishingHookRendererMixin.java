@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(FishingHookRenderer.class)
 public class FishingHookRendererMixin {
 
-    @Redirect(method = "getPlayerHandPos", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;is(Lnet/minecraft/world/item/Item;)Z"))
+    @Redirect(method = "render*", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;is(Lnet/minecraft/world/item/Item;)Z"))
     private boolean redirectedStackIs(ItemStack itemStack, Item originalItem) {
         if (FabricLoader.getInstance().isModLoaded("tide")){
             return TideFishingRodVariantItems.stackIsTide(itemStack);
