@@ -19,12 +19,6 @@
         "recipe": "mstv-mfrv:acacia_fishing_rod"
       },
       "trigger": "minecraft:recipe_unlocked"
-    },
-    "has_the_recipe": {
-      "conditions": {
-        "recipe": "mstv-mfrv:acacia_fishing_rod"
-      },
-      "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
