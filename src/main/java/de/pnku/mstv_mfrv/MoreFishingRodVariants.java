@@ -1,6 +1,5 @@
 package de.pnku.mstv_mfrv;
 
-import de.pnku.mstv_base.item.MoreStickVariantItems;
 import de.pnku.mstv_mfrv.item.MoreFishingRodVariantItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -21,7 +20,7 @@ public class MoreFishingRodVariants implements ModInitializer {
 	}
 
 	public static ResourceLocation asId(String path) {
-		return new ResourceLocation(MOD_ID, path);
+		return ResourceLocation.fromNamespaceAndPath(MOD_ID, path);
 	}
 
 }
