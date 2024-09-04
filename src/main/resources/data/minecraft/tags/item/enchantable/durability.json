@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "#mstv-mfrv:fishing_rod_variants",
+    "#mstv-mfrv:carrot_on_a_stick_variants",
+    "#mstv-mfrv:warped_fungus_on_a_stick_variants"
+  ]
+}
