@@ -3,12 +3,8 @@
   "category": "misc",
   "group": "carrot_on_a_stick_variants",
   "key": {
-    "F": {
-      "item": "mstv-mfrv:jungle_fishing_rod"
-    },
-    "V": {
-      "item": "minecraft:carrot"
-    }
+    "F": "mstv-mfrv:jungle_fishing_rod",
+    "V": "minecraft:carrot"
   },
   "pattern": [
     "F ",

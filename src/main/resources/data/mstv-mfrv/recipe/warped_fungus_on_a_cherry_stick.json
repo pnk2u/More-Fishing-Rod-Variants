@@ -3,12 +3,8 @@
   "category": "misc",
   "group": "warped_fungus_on_a_stick_variants",
   "key": {
-    "F": {
-      "item": "mstv-mfrv:cherry_fishing_rod"
-    },
-    "T": {
-      "item": "minecraft:warped_fungus"
-    }
+    "F": "mstv-mfrv:cherry_fishing_rod",
+    "T": "minecraft:warped_fungus"
   },
   "pattern": [
     "F ",

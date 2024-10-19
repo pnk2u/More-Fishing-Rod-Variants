@@ -4,6 +4,8 @@ import de.pnku.mstv_base.item.MoreStickVariantItem;
 import de.pnku.mstv_mfrv.MoreFishingRodVariants;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.*;
 import net.minecraft.core.Registry;
@@ -14,43 +16,68 @@ import java.util.List;
 import java.util.Map;
 
 import static de.pnku.mstv_base.item.MoreStickVariantItems.*;
+import static de.pnku.mstv_mfrv.MoreFishingRodVariants.LOGGER;
 
 
 public class MoreFishingRodVariantItems {
 
+    public static Item createRodItem(String rodType, String woodType) {
+        Item.Properties rodProperties;
+        String article = woodType.equals("acacia") ? "an_" : "a_";
+        switch (rodType) {
+            case "fish" -> rodProperties = new Item.Properties().durability(64).setId(ResourceKey.create(Registries.ITEM, MoreFishingRodVariants.asId(woodType + "_fishing_rod")));
+            case "pig" -> rodProperties = new Item.Properties().durability(25).setId(ResourceKey.create(Registries.ITEM, MoreFishingRodVariants.asId("carrot_on_" + article + woodType + "_stick")));
+            case "strider" -> rodProperties = new Item.Properties().durability(100).setId(ResourceKey.create(Registries.ITEM, MoreFishingRodVariants.asId("warped_fungus_on_" + article + woodType + "_stick")));
+            case null, default -> {
+                rodProperties = new Item.Properties();
+                LOGGER.info("Error: Rod with wrong or missing entity type");
+            }
+        }
+        if (woodType.matches("crimson|warped")) {
+            rodProperties.fireResistant();
+        }
+        switch (rodType) {
+            case "fish" -> {return new FishingRodItem(rodProperties);}
+            case "pig" -> {return new FoodOnAStickItem<>(EntityType.PIG,7,rodProperties);}
+            case "strider" -> {return new FoodOnAStickItem<>(EntityType.STRIDER,1,rodProperties);}
+            case null, default -> {return new Item(rodProperties);}
+        }
+    }
+
+
     // Fishing Rods
-    public static final Item ACACIA_FISHING_ROD = new FishingRodItem(new Item.Properties().durability(64));
-    public static final Item BAMBOO_FISHING_ROD = new FishingRodItem(new Item.Properties().durability(64));
-    public static final Item BIRCH_FISHING_ROD = new FishingRodItem(new Item.Properties().durability(64));
-    public static final Item CHERRY_FISHING_ROD = new FishingRodItem(new Item.Properties().durability(64));
-    public static final Item CRIMSON_FISHING_ROD = new FishingRodItem(new Item.Properties().durability(65).fireResistant());
-    public static final Item DARK_OAK_FISHING_ROD = new FishingRodItem(new Item.Properties().durability(64));
-    public static final Item JUNGLE_FISHING_ROD = new FishingRodItem(new Item.Properties().durability(64));
-    public static final Item MANGROVE_FISHING_ROD = new FishingRodItem(new Item.Properties().durability(64));
-    public static final Item SPRUCE_FISHING_ROD = new FishingRodItem(new Item.Properties().durability(64));
-    public static final Item WARPED_FISHING_ROD = new FishingRodItem(new Item.Properties().durability(65).fireResistant());
+    public static final Item ACACIA_FISHING_ROD = createRodItem("fish", "acacia");
+    public static final Item BAMBOO_FISHING_ROD = createRodItem("fish", "bamboo");
+    public static final Item BIRCH_FISHING_ROD = createRodItem("fish", "birch");
+    public static final Item CHERRY_FISHING_ROD = createRodItem("fish", "cherry");
+    public static final Item CRIMSON_FISHING_ROD = createRodItem("fish", "crimson");
+    public static final Item DARK_OAK_FISHING_ROD = createRodItem("fish", "dark_oak");
+    public static final Item JUNGLE_FISHING_ROD = createRodItem("fish", "jungle");
+    public static final Item MANGROVE_FISHING_ROD = createRodItem("fish", "mangrove");
+    public static final Item SPRUCE_FISHING_ROD = createRodItem("fish", "spruce");
+    public static final Item WARPED_FISHING_ROD = createRodItem("fish", "warped");
 
-    public static final Item CARROT_ON_AN_ACACIA_STICK = new FoodOnAStickItem<>(new Item.Properties().durability(25), EntityType.PIG, 7);
-    public static final Item CARROT_ON_A_BAMBOO_STICK = new FoodOnAStickItem<>(new Item.Properties().durability(25), EntityType.PIG, 7);
-    public static final Item CARROT_ON_A_BIRCH_STICK = new FoodOnAStickItem<>(new Item.Properties().durability(25), EntityType.PIG, 7);
-    public static final Item CARROT_ON_A_CHERRY_STICK = new FoodOnAStickItem<>(new Item.Properties().durability(25), EntityType.PIG, 7);
-    public static final Item CARROT_ON_A_CRIMSON_STICK = new FoodOnAStickItem<>(new Item.Properties().durability(26).fireResistant(), EntityType.PIG, 7);
-    public static final Item CARROT_ON_A_DARK_OAK_STICK = new FoodOnAStickItem<>(new Item.Properties().durability(25), EntityType.PIG, 7);
-    public static final Item CARROT_ON_A_JUNGLE_STICK = new FoodOnAStickItem<>(new Item.Properties().durability(25), EntityType.PIG, 7);
-    public static final Item CARROT_ON_A_MANGROVE_STICK = new FoodOnAStickItem<>(new Item.Properties().durability(25), EntityType.PIG, 7);
-    public static final Item CARROT_ON_A_SPRUCE_STICK = new FoodOnAStickItem<>(new Item.Properties().durability(25), EntityType.PIG, 7);
-    public static final Item CARROT_ON_A_WARPED_STICK = new FoodOnAStickItem<>(new Item.Properties().durability(26).fireResistant(), EntityType.PIG, 7);
+    public static final Item CARROT_ON_AN_ACACIA_STICK = createRodItem("pig", "acacia");
+    public static final Item CARROT_ON_A_BAMBOO_STICK = createRodItem("pig", "bamboo");
+    public static final Item CARROT_ON_A_BIRCH_STICK = createRodItem("pig", "birch");
+    public static final Item CARROT_ON_A_CHERRY_STICK = createRodItem("pig", "cherry");
+    public static final Item CARROT_ON_A_CRIMSON_STICK = createRodItem("pig", "crimson");
+    public static final Item CARROT_ON_A_DARK_OAK_STICK = createRodItem("pig", "dark_oak");
+    public static final Item CARROT_ON_A_JUNGLE_STICK = createRodItem("pig", "jungle");
+    public static final Item CARROT_ON_A_MANGROVE_STICK = createRodItem("pig", "mangrove");
+    public static final Item CARROT_ON_A_SPRUCE_STICK = createRodItem("pig", "spruce");
+    public static final Item CARROT_ON_A_WARPED_STICK = createRodItem("pig", "warped");
 
-    public static final Item WARPED_FUNGUS_ON_AN_ACACIA_STICK = new FoodOnAStickItem<>(new Item.Properties().durability(100), EntityType.STRIDER, 1);
-    public static final Item WARPED_FUNGUS_ON_A_BAMBOO_STICK = new FoodOnAStickItem<>(new Item.Properties().durability(100), EntityType.STRIDER, 1);
-    public static final Item WARPED_FUNGUS_ON_A_BIRCH_STICK = new FoodOnAStickItem<>(new Item.Properties().durability(100), EntityType.STRIDER, 1);
-    public static final Item WARPED_FUNGUS_ON_A_CHERRY_STICK = new FoodOnAStickItem<>(new Item.Properties().durability(100), EntityType.STRIDER, 1);
-    public static final Item WARPED_FUNGUS_ON_A_CRIMSON_STICK = new FoodOnAStickItem<>(new Item.Properties().durability(101).fireResistant(), EntityType.STRIDER, 1);
-    public static final Item WARPED_FUNGUS_ON_A_DARK_OAK_STICK = new FoodOnAStickItem<>(new Item.Properties().durability(100), EntityType.STRIDER, 1);
-    public static final Item WARPED_FUNGUS_ON_A_JUNGLE_STICK = new FoodOnAStickItem<>(new Item.Properties().durability(100), EntityType.STRIDER, 1);
-    public static final Item WARPED_FUNGUS_ON_A_MANGROVE_STICK = new FoodOnAStickItem<>(new Item.Properties().durability(100), EntityType.STRIDER, 1);
-    public static final Item WARPED_FUNGUS_ON_A_SPRUCE_STICK = new FoodOnAStickItem<>(new Item.Properties().durability(100), EntityType.STRIDER, 1);
-    public static final Item WARPED_FUNGUS_ON_A_WARPED_STICK = new FoodOnAStickItem<>(new Item.Properties().durability(101).fireResistant(), EntityType.STRIDER, 1);
+    public static final Item WARPED_FUNGUS_ON_AN_ACACIA_STICK = createRodItem("strider", "acacia");
+    public static final Item WARPED_FUNGUS_ON_A_BAMBOO_STICK = createRodItem("strider", "bamboo");
+    public static final Item WARPED_FUNGUS_ON_A_BIRCH_STICK = createRodItem("strider", "birch");
+    public static final Item WARPED_FUNGUS_ON_A_CHERRY_STICK = createRodItem("strider", "cherry");
+    public static final Item WARPED_FUNGUS_ON_A_CRIMSON_STICK = createRodItem("strider", "crimson");
+    public static final Item WARPED_FUNGUS_ON_A_DARK_OAK_STICK = createRodItem("strider", "dark_oak");
+    public static final Item WARPED_FUNGUS_ON_A_JUNGLE_STICK = createRodItem("strider", "jungle");
+    public static final Item WARPED_FUNGUS_ON_A_MANGROVE_STICK = createRodItem("strider", "mangrove");
+    public static final Item WARPED_FUNGUS_ON_A_SPRUCE_STICK = createRodItem("strider", "spruce");
+    public static final Item WARPED_FUNGUS_ON_A_WARPED_STICK = createRodItem("strider", "warped");
 
     public static final List<Item> more_fishing_rods = new ArrayList<>();
     public static final Map<Item, Item> more_fishing_rod_sticks = new HashMap<>();
