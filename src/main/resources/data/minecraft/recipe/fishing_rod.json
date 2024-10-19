@@ -3,12 +3,8 @@
   "category": "equipment",
   "group": "fishing_rods",
   "key": {
-    "#": {
-      "item": "minecraft:stick"
-    },
-    "X": {
-      "item": "minecraft:string"
-    }
+    "#": "minecraft:stick",
+    "X": "minecraft:string"
   },
   "pattern": [
     "  #",

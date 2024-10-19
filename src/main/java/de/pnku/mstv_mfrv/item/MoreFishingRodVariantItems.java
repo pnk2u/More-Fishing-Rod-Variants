@@ -2,10 +2,10 @@ package de.pnku.mstv_mfrv.item;
 
 import de.pnku.mstv_base.item.MoreStickVariantItem;
 import de.pnku.mstv_mfrv.MoreFishingRodVariants;
-import de.pnku.mstv_mfrv.item.compat.tide.TideFishingRodVariantItems;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.*;
 import net.minecraft.core.Registry;
@@ -16,22 +16,18 @@ import java.util.List;
 import java.util.Map;
 
 import static de.pnku.mstv_base.item.MoreStickVariantItems.*;
-import static de.pnku.mstv_mfrv.MoreFishingRodVariants.*;
+import static de.pnku.mstv_mfrv.MoreFishingRodVariants.LOGGER;
 
 
 public class MoreFishingRodVariantItems {
 
     public static Item createRodItem(String rodType, String woodType) {
-        // Tide Compatibility
-            if (rodType.equals("fish") && FabricLoader.getInstance().isModLoaded("tide")){
-                return TideFishingRodVariantItems.createTideFishingRodItem(woodType);
-            }
-
         Item.Properties rodProperties;
+        String article = woodType.equals("acacia") ? "an_" : "a_";
         switch (rodType) {
-            case "fish" -> rodProperties = new Item.Properties().durability(64);
-            case "pig" -> rodProperties = new Item.Properties().durability(25);
-            case "strider" -> rodProperties = new Item.Properties().durability(100);
+            case "fish" -> rodProperties = new Item.Properties().durability(64).setId(ResourceKey.create(Registries.ITEM, MoreFishingRodVariants.asId(woodType + "_fishing_rod")));
+            case "pig" -> rodProperties = new Item.Properties().durability(25).setId(ResourceKey.create(Registries.ITEM, MoreFishingRodVariants.asId("carrot_on_" + article + woodType + "_stick")));
+            case "strider" -> rodProperties = new Item.Properties().durability(100).setId(ResourceKey.create(Registries.ITEM, MoreFishingRodVariants.asId("warped_fungus_on_" + article + woodType + "_stick")));
             case null, default -> {
                 rodProperties = new Item.Properties();
                 LOGGER.info("Error: Rod with wrong or missing entity type");
@@ -42,8 +38,8 @@ public class MoreFishingRodVariantItems {
         }
         switch (rodType) {
             case "fish" -> {return new FishingRodItem(rodProperties);}
-            case "pig" -> {return new FoodOnAStickItem<>(rodProperties,EntityType.PIG,7);}
-            case "strider" -> {return new FoodOnAStickItem<>(rodProperties,EntityType.STRIDER,1);}
+            case "pig" -> {return new FoodOnAStickItem<>(EntityType.PIG,7,rodProperties);}
+            case "strider" -> {return new FoodOnAStickItem<>(EntityType.STRIDER,1,rodProperties);}
             case null, default -> {return new Item(rodProperties);}
         }
     }

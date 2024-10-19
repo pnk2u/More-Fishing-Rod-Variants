@@ -3,12 +3,8 @@
   "category": "misc",
   "group": "carrot_on_a_stick_variants",
   "key": {
-    "#": {
-      "item": "minecraft:fishing_rod"
-    },
-    "X": {
-      "item": "minecraft:carrot"
-    }
+    "#": "minecraft:fishing_rod",
+    "X": "minecraft:carrot"
   },
   "pattern": [
     "# ",

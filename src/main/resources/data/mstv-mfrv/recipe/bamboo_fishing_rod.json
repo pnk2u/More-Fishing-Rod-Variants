@@ -3,12 +3,8 @@
   "category": "equipment",
   "group": "fishing_rods",
   "key": {
-    "/": {
-      "item": "minecraft:bamboo"
-    },
-    "S": {
-      "item": "minecraft:string"
-    }
+    "/": "minecraft:bamboo",
+    "S": "minecraft:string"
   },
   "pattern": [
     "  /",

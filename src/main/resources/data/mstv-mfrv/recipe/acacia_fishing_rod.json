@@ -3,12 +3,8 @@
   "category": "equipment",
   "group": "fishing_rods",
   "key": {
-    "/": {
-      "item": "mstv-base:acacia_stick"
-    },
-    "S": {
-      "item": "minecraft:string"
-    }
+    "/": "mstv-base:acacia_stick",
+    "S": "minecraft:string"
   },
   "pattern": [
     "  /",
