@@ -32,7 +32,7 @@ public class MoreFishingRodVariantItems {
             case "fish" -> rodProperties = new Item.Properties().durability(64);
             case "pig" -> rodProperties = new Item.Properties().durability(25);
             case "strider" -> rodProperties = new Item.Properties().durability(100);
-            case null, default -> {
+            default -> {
                 rodProperties = new Item.Properties();
                 LOGGER.info("Error: Rod with wrong or missing entity type");
             }
@@ -44,7 +44,7 @@ public class MoreFishingRodVariantItems {
             case "fish" -> {return new FishingRodItem(rodProperties);}
             case "pig" -> {return new FoodOnAStickItem<>(rodProperties,EntityType.PIG,7);}
             case "strider" -> {return new FoodOnAStickItem<>(rodProperties,EntityType.STRIDER,1);}
-            case null, default -> {return new Item(rodProperties);}
+            default -> {return new Item(rodProperties);}
         }
     }
 
