@@ -18,8 +18,6 @@ import java.util.Map;
 import static de.pnku.mstv_base.item.MoreStickVariantItems.*;
 import static de.pnku.mstv_mfrv.MoreFishingRodVariants.*;
 
-// import com.li64.tide.registries.items.TideFishingRodItem; // Tide Compatibility
-
 
 public class MoreFishingRodVariantItems {
 
