@@ -13,14 +13,10 @@ public class MoreFishingRodVariants implements ModInitializer {
 
 	public static final String MOD_ID = "mstv-mfrv";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
-	public static boolean isTideLoaded = false;
 
 	
 	@Override
 	public void onInitialize() {
-		if(FabricLoader.getInstance().isModLoaded("tide")) {
-			isTideLoaded = true;
-		}
 		MoreFishingRodVariantItems.registerRodItems();
 	}
 
