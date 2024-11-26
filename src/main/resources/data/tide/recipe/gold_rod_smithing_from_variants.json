@@ -8,19 +8,11 @@
     }
   ],
   "type": "minecraft:smithing_transform",
-  "addition": {
-    "tag": "c:ingots/gold"
-  },
-  "base": [
-    {
-      "tag": "mstv-mfrv:fishing_rod_variants"
-    }
-  ],
+  "addition": "#c:ingots/gold",
+  "base": "#mstv-mfrv:fishing_rod_variants",
   "result": {
     "count": 1,
     "id": "tide:golden_fishing_rod"
   },
-  "template": {
-    "tag": "c:strings"
-  }
+  "template": "#c:strings"
 }
