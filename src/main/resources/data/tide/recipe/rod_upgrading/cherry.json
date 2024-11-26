@@ -1,0 +1,19 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded" ,
+      "values": [
+        "tide"
+      ]
+    }
+  ],
+  "type": "tide:rod_upgrading",
+  "input": {
+    "count": 1,
+    "id": "mstv-mfrv:cherry_fishing_rod"
+  },
+  "output": {
+    "count": 1,
+    "id": "mstv-mfrv:cherry_fishing_rod"
+  }
+}

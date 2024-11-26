@@ -1,0 +1,26 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded" ,
+      "values": [
+        "tide"
+      ]
+    }
+  ],
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "tag": "c:ingots/gold"
+  },
+  "base": [
+    {
+      "tag": "mstv-mfrv:fishing_rod_variants"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "tide:golden_fishing_rod"
+  },
+  "template": {
+    "tag": "c:strings"
+  }
+}

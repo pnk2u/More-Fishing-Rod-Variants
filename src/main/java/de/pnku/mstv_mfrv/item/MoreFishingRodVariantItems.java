@@ -2,7 +2,9 @@ package de.pnku.mstv_mfrv.item;
 
 import de.pnku.mstv_base.item.MoreStickVariantItem;
 import de.pnku.mstv_mfrv.MoreFishingRodVariants;
+import de.pnku.mstv_mfrv.item.compat.tide.TideFishingRodVariantItems;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
@@ -16,12 +18,17 @@ import java.util.List;
 import java.util.Map;
 
 import static de.pnku.mstv_base.item.MoreStickVariantItems.*;
-import static de.pnku.mstv_mfrv.MoreFishingRodVariants.LOGGER;
+import static de.pnku.mstv_mfrv.MoreFishingRodVariants.*;
 
 
 public class MoreFishingRodVariantItems {
 
     public static Item createRodItem(String rodType, String woodType) {
+      // Tide Compatibility
+            if (rodType.equals("fish") && FabricLoader.getInstance().isModLoaded("tide")){
+                return TideFishingRodVariantItems.createTideFishingRodItem(woodType);
+            }
+
         Item.Properties rodProperties;
         String article = woodType.equals("acacia") ? "an_" : "a_";
         switch (rodType) {
