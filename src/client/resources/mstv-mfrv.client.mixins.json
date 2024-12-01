@@ -3,7 +3,6 @@
   "package": "de.pnku.mstv_mfrv.mixin.client" ,
   "compatibilityLevel": "JAVA_21" ,
   "client": [
-    "FishingHookRendererMixin"
   ] ,
   "injectors": {
     "defaultRequire": 1
