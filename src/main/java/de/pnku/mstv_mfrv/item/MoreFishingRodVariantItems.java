@@ -52,6 +52,7 @@ public class MoreFishingRodVariantItems {
     public static final Item CHERRY_FISHING_ROD = createRodItem("fish", "cherry");
     public static final Item CRIMSON_FISHING_ROD = createRodItem("fish", "crimson");
     public static final Item DARK_OAK_FISHING_ROD = createRodItem("fish", "dark_oak");
+    public static final Item PALE_OAK_FISHING_ROD = createRodItem("fish", "pale_oak");
     public static final Item JUNGLE_FISHING_ROD = createRodItem("fish", "jungle");
     public static final Item MANGROVE_FISHING_ROD = createRodItem("fish", "mangrove");
     public static final Item SPRUCE_FISHING_ROD = createRodItem("fish", "spruce");
@@ -63,6 +64,7 @@ public class MoreFishingRodVariantItems {
     public static final Item CARROT_ON_A_CHERRY_STICK = createRodItem("pig", "cherry");
     public static final Item CARROT_ON_A_CRIMSON_STICK = createRodItem("pig", "crimson");
     public static final Item CARROT_ON_A_DARK_OAK_STICK = createRodItem("pig", "dark_oak");
+    public static final Item CARROT_ON_A_PALE_OAK_STICK = createRodItem("pig", "pale_oak");
     public static final Item CARROT_ON_A_JUNGLE_STICK = createRodItem("pig", "jungle");
     public static final Item CARROT_ON_A_MANGROVE_STICK = createRodItem("pig", "mangrove");
     public static final Item CARROT_ON_A_SPRUCE_STICK = createRodItem("pig", "spruce");
@@ -74,6 +76,7 @@ public class MoreFishingRodVariantItems {
     public static final Item WARPED_FUNGUS_ON_A_CHERRY_STICK = createRodItem("strider", "cherry");
     public static final Item WARPED_FUNGUS_ON_A_CRIMSON_STICK = createRodItem("strider", "crimson");
     public static final Item WARPED_FUNGUS_ON_A_DARK_OAK_STICK = createRodItem("strider", "dark_oak");
+    public static final Item WARPED_FUNGUS_ON_A_PALE_OAK_STICK = createRodItem("strider", "pale_oak");
     public static final Item WARPED_FUNGUS_ON_A_JUNGLE_STICK = createRodItem("strider", "jungle");
     public static final Item WARPED_FUNGUS_ON_A_MANGROVE_STICK = createRodItem("strider", "mangrove");
     public static final Item WARPED_FUNGUS_ON_A_SPRUCE_STICK = createRodItem("strider", "spruce");
@@ -95,7 +98,8 @@ public class MoreFishingRodVariantItems {
         registerFishingRodItem(CHERRY_FISHING_ROD, BIRCH_FISHING_ROD, CHERRY_STICK);
         registerFishingRodItem(CRIMSON_FISHING_ROD, CHERRY_FISHING_ROD, CRIMSON_STICK);
         registerFishingRodItem(DARK_OAK_FISHING_ROD, CRIMSON_FISHING_ROD, DARK_OAK_STICK);
-        registerFishingRodItem(JUNGLE_FISHING_ROD, DARK_OAK_FISHING_ROD, JUNGLE_STICK);
+        registerFishingRodItem(PALE_OAK_FISHING_ROD, DARK_OAK_FISHING_ROD, PALE_OAK_STICK);
+        registerFishingRodItem(JUNGLE_FISHING_ROD, PALE_OAK_FISHING_ROD, JUNGLE_STICK);
         registerFishingRodItem(MANGROVE_FISHING_ROD, JUNGLE_FISHING_ROD, MANGROVE_STICK);
         registerFishingRodItem(SPRUCE_FISHING_ROD, MANGROVE_FISHING_ROD, SPRUCE_STICK);
         registerFishingRodItem(WARPED_FISHING_ROD, SPRUCE_FISHING_ROD, WARPED_STICK);
@@ -107,7 +111,8 @@ public class MoreFishingRodVariantItems {
         registerCarrotOnAStickItem(CARROT_ON_A_CHERRY_STICK, CARROT_ON_A_BIRCH_STICK, CHERRY_STICK);
         registerCarrotOnAStickItem(CARROT_ON_A_CRIMSON_STICK, CARROT_ON_A_CHERRY_STICK, CRIMSON_STICK);
         registerCarrotOnAStickItem(CARROT_ON_A_DARK_OAK_STICK, CARROT_ON_A_CRIMSON_STICK, DARK_OAK_STICK);
-        registerCarrotOnAStickItem(CARROT_ON_A_JUNGLE_STICK, CARROT_ON_A_DARK_OAK_STICK, JUNGLE_STICK);
+        registerCarrotOnAStickItem(CARROT_ON_A_PALE_OAK_STICK, CARROT_ON_A_DARK_OAK_STICK, PALE_OAK_STICK);
+        registerCarrotOnAStickItem(CARROT_ON_A_JUNGLE_STICK, CARROT_ON_A_PALE_OAK_STICK, JUNGLE_STICK);
         registerCarrotOnAStickItem(CARROT_ON_A_MANGROVE_STICK, CARROT_ON_A_JUNGLE_STICK, MANGROVE_STICK);
         registerCarrotOnAStickItem(CARROT_ON_A_SPRUCE_STICK, CARROT_ON_A_MANGROVE_STICK, SPRUCE_STICK);
         registerCarrotOnAStickItem(CARROT_ON_A_WARPED_STICK, CARROT_ON_A_SPRUCE_STICK, WARPED_STICK);
@@ -119,7 +124,8 @@ public class MoreFishingRodVariantItems {
         registerWarpedFungusOnAStickItem(WARPED_FUNGUS_ON_A_CHERRY_STICK, WARPED_FUNGUS_ON_A_BIRCH_STICK, CHERRY_STICK);
         registerWarpedFungusOnAStickItem(WARPED_FUNGUS_ON_A_CRIMSON_STICK, WARPED_FUNGUS_ON_A_CHERRY_STICK, CRIMSON_STICK);
         registerWarpedFungusOnAStickItem(WARPED_FUNGUS_ON_A_DARK_OAK_STICK, WARPED_FUNGUS_ON_A_CRIMSON_STICK, DARK_OAK_STICK);
-        registerWarpedFungusOnAStickItem(WARPED_FUNGUS_ON_A_JUNGLE_STICK, WARPED_FUNGUS_ON_A_DARK_OAK_STICK, JUNGLE_STICK);
+        registerWarpedFungusOnAStickItem(WARPED_FUNGUS_ON_A_PALE_OAK_STICK, WARPED_FUNGUS_ON_A_DARK_OAK_STICK, PALE_OAK_STICK);
+        registerWarpedFungusOnAStickItem(WARPED_FUNGUS_ON_A_JUNGLE_STICK, WARPED_FUNGUS_ON_A_PALE_OAK_STICK, JUNGLE_STICK);
         registerWarpedFungusOnAStickItem(WARPED_FUNGUS_ON_A_MANGROVE_STICK, WARPED_FUNGUS_ON_A_JUNGLE_STICK, MANGROVE_STICK);
         registerWarpedFungusOnAStickItem(WARPED_FUNGUS_ON_A_SPRUCE_STICK, WARPED_FUNGUS_ON_A_MANGROVE_STICK, SPRUCE_STICK);
         registerWarpedFungusOnAStickItem(WARPED_FUNGUS_ON_A_WARPED_STICK, WARPED_FUNGUS_ON_A_SPRUCE_STICK, WARPED_STICK);

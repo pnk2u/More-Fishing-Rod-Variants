@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "fishing_rods",
+  "key": {
+    "/": "mstv-base:pale_oak_stick",
+    "S": "minecraft:string"
+  },
+  "pattern": [
+    "  /",
+    " /S",
+    "/ S"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mstv-mfrv:pale_oak_fishing_rod"
+  }
+}
