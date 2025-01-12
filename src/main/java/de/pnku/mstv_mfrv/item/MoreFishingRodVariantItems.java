@@ -25,12 +25,12 @@ public class MoreFishingRodVariantItems {
         Item.Properties rodProperties;
         String article = woodType.equals("acacia") ? "an_" : "a_";
         switch (rodType) {
-            case "fish" -> rodProperties = new Item.Properties().durability(64).setId(ResourceKey.create(Registries.ITEM, MoreFishingRodVariants.asId(woodType + "_fishing_rod")));
+            case "fish" -> rodProperties = new Item.Properties().durability(64).enchantable(1).setId(ResourceKey.create(Registries.ITEM, MoreFishingRodVariants.asId(woodType + "_fishing_rod")));
             case "pig" -> rodProperties = new Item.Properties().durability(25).setId(ResourceKey.create(Registries.ITEM, MoreFishingRodVariants.asId("carrot_on_" + article + woodType + "_stick")));
             case "strider" -> rodProperties = new Item.Properties().durability(100).setId(ResourceKey.create(Registries.ITEM, MoreFishingRodVariants.asId("warped_fungus_on_" + article + woodType + "_stick")));
             case null, default -> {
                 rodProperties = new Item.Properties();
-                LOGGER.info("Error: Rod with wrong or missing entity type");
+                LOGGER.info("Error: Rod with incorrect or missing entity type");
             }
         }
         if (woodType.matches("crimson|warped")) {
