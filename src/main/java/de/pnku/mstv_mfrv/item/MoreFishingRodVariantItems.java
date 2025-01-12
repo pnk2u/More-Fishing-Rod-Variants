@@ -2,7 +2,9 @@ package de.pnku.mstv_mfrv.item;
 
 import de.pnku.mstv_base.item.MoreStickVariantItem;
 import de.pnku.mstv_mfrv.MoreFishingRodVariants;
+import de.pnku.mstv_mfrv.item.compat.tide.TideFishingRodVariantItems;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.*;
@@ -16,15 +18,18 @@ import java.util.Map;
 import static de.pnku.mstv_base.item.MoreStickVariantItems.*;
 import static de.pnku.mstv_mfrv.MoreFishingRodVariants.*;
 
-import com.li64.tide.registries.items.TideFishingRodItem; // Tide Compatibility
-
 
 public class MoreFishingRodVariantItems {
 
     public static Item createRodItem(String rodType, String woodType) {
+        // Tide Compatibility
+        if (rodType.equals("fish") && FabricLoader.getInstance().isModLoaded("tide")){
+            return TideFishingRodVariantItems.createTideFishingRodItem(woodType);
+        }
+
         Item.Properties rodProperties;
         switch (rodType) {
-            case "fish" -> rodProperties = !isTideLoaded ? new Item.Properties().durability(64) : new Item.Properties().durability(20);
+            case "fish" -> rodProperties = new Item.Properties().durability(64);
             case "pig" -> rodProperties = new Item.Properties().durability(25);
             case "strider" -> rodProperties = new Item.Properties().durability(100);
             default -> {
@@ -36,7 +41,7 @@ public class MoreFishingRodVariantItems {
             rodProperties.fireResistant();
         }
         switch (rodType) {
-            case "fish" -> {if (!isTideLoaded) {return new FishingRodItem(rodProperties);} else {return new TideFishingRodItem(32, rodProperties);}} // Tide Compatibility
+            case "fish" -> {return new FishingRodItem(rodProperties);}
             case "pig" -> {return new FoodOnAStickItem<>(rodProperties,EntityType.PIG,7);}
             case "strider" -> {return new FoodOnAStickItem<>(rodProperties,EntityType.STRIDER,1);}
             default -> {return new Item(rodProperties);}
