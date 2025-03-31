@@ -17,7 +17,7 @@ public class MfrvItemProperties {
     }
 
     private static void registerFishingRodPredicate(Item fishingRod) {
-        ItemProperties.register(fishingRod, ResourceLocation.parse("cast"),
+        ItemProperties.register(fishingRod, ResourceLocation.tryParse("cast"),
                 (itemStack, clientLevel, livingEntity, seed) -> {
                     if (livingEntity == null) {
                         return 0.0f;
