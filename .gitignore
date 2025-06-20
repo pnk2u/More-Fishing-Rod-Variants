@@ -1,2 +1,7 @@
 *_local.*
 [[]*[]]/
+/run/
+/res/
+/.idea/
+/build/
+/.gradle/
