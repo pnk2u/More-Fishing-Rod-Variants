@@ -131,7 +131,7 @@ dependencies {
 	modRuntimeOnly "maven.modrinth:more-stick-variants:${project.mstv_version_id}"
 
 	// Tide (for Compat)
-	modCompileOnly "maven.modrinth:tide:${project.tide_version_id}"
+	//modCompileOnly "maven.modrinth:tide:${project.tide_version_id}"
 }
 
 static def version_reduced(String input) { // Reduces a version string by one minor version and sets patch to 0
