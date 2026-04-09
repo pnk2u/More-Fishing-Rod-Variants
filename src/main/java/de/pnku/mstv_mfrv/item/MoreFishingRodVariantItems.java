@@ -3,12 +3,12 @@ package de.pnku.mstv_mfrv.item;
 import de.pnku.mstv_base.item.MoreStickVariantItem;
 import de.pnku.mstv_mfrv.MoreFishingRodVariants;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.*;
-import net.minecraft.core.Registry;
 
 import java.util.ArrayList;
 import java.util.HashMap;

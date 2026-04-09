@@ -3,7 +3,6 @@ package de.pnku.mstv_mfrv.mixin.entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.ai.goal.TemptGoal;
-import net.minecraft.world.entity.animal.pig.Pig;
 import net.minecraft.world.entity.monster.Strider;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -15,7 +14,6 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import static de.pnku.mstv_mfrv.item.MoreFishingRodVariantItems.more_carrot_on_a_stick_variants;
 import static de.pnku.mstv_mfrv.item.MoreFishingRodVariantItems.more_warped_fungus_on_a_stick_variants;
 
 @Mixin(Strider.class)
