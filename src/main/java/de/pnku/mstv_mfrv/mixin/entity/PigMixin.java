@@ -4,12 +4,10 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.ai.goal.TemptGoal;
 import net.minecraft.world.entity.animal.Pig;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
@@ -18,7 +16,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import static de.pnku.mstv_mfrv.item.MoreFishingRodVariantItems.more_carrot_on_a_stick_variants;
+import static de.pnku.mstv_mfrv.item.MoreFishingRodVariantItems.*;
 
 @Mixin(Pig.class)
 public class PigMixin extends PathfinderMob {
@@ -28,7 +26,7 @@ public class PigMixin extends PathfinderMob {
     }
 
     @Unique
-    private static Ingredient C_STICK_VARIANTS = Ingredient.of(new ItemLike[]{CARROT_ON_AN_ACACIA_STICK, CARROT_ON_A_BAMBOO_STICK, CARROT_ON_A_BAMBOO_STICK, CARROT_ON_A_BIRCH_STICK, CARROT_ON_A_CHERRY_STICK, CARROT_ON_A_CRIMSON_STICK, CARROT_ON_A_DARK_OAK_STICK, CARROT_ON_A_JUNGLE_STICK, CARROT_ON_A_MANGROVE_STICK, CARROT_ON_A_SPRUCE_STICK, CARROT_ON_A_WARPED_STICK});
+    private static Ingredient C_STICK_VARIANTS = Ingredient.of(CARROT_ON_AN_ACACIA_STICK, CARROT_ON_A_BAMBOO_STICK, CARROT_ON_A_BAMBOO_STICK, CARROT_ON_A_BIRCH_STICK, CARROT_ON_A_CHERRY_STICK, CARROT_ON_A_CRIMSON_STICK, CARROT_ON_A_DARK_OAK_STICK, CARROT_ON_A_JUNGLE_STICK, CARROT_ON_A_MANGROVE_STICK, CARROT_ON_A_SPRUCE_STICK, CARROT_ON_A_WARPED_STICK);
 
     @Inject(method = "registerGoals", at = @At("TAIL"))
     protected void injectedTemptGoalInit (CallbackInfo ci) {
