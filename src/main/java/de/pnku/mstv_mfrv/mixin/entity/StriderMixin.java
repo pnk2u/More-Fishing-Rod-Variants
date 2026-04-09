@@ -4,7 +4,6 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.ai.goal.TemptGoal;
 import net.minecraft.world.entity.monster.Strider;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -19,6 +18,15 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import static de.pnku.mstv_mfrv.item.MoreFishingRodVariantItems.*;
+import static de.pnku.mstv_mfrv.item.MoreFishingRodVariantItems.WARPED_FUNGUS_ON_A_BAMBOO_STICK;
+import static de.pnku.mstv_mfrv.item.MoreFishingRodVariantItems.WARPED_FUNGUS_ON_A_BIRCH_STICK;
+import static de.pnku.mstv_mfrv.item.MoreFishingRodVariantItems.WARPED_FUNGUS_ON_A_CHERRY_STICK;
+import static de.pnku.mstv_mfrv.item.MoreFishingRodVariantItems.WARPED_FUNGUS_ON_A_CRIMSON_STICK;
+import static de.pnku.mstv_mfrv.item.MoreFishingRodVariantItems.WARPED_FUNGUS_ON_A_DARK_OAK_STICK;
+import static de.pnku.mstv_mfrv.item.MoreFishingRodVariantItems.WARPED_FUNGUS_ON_A_JUNGLE_STICK;
+import static de.pnku.mstv_mfrv.item.MoreFishingRodVariantItems.WARPED_FUNGUS_ON_A_MANGROVE_STICK;
+import static de.pnku.mstv_mfrv.item.MoreFishingRodVariantItems.WARPED_FUNGUS_ON_A_SPRUCE_STICK;
+import static de.pnku.mstv_mfrv.item.MoreFishingRodVariantItems.WARPED_FUNGUS_ON_A_WARPED_STICK;
 
 @Mixin(Strider.class)
 public class StriderMixin extends PathfinderMob {
