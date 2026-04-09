@@ -4,9 +4,7 @@
   "version": "${mod_version}",
   "name": "${mod_name}",
   "description": "${mod_description}",
-  "authors": [
-    "pnku"
-  ],
+  "authors": ["pnku"],
   "contact": {
     "homepage": "https://pnku.de",
     "email": "contact@pnku.de",
@@ -34,15 +32,22 @@
   "depends": {
 		"fabricloader": ">=${loader_version}",
 		"minecraft": ">=${minecraft_version}",
-		"java": ">=21",
+		"java": ">=${java_version}",
 		"fabric-api": "*",
-        "mstv-base": "*"
+        "mstv-base": ">=${mstv_version}"
 	},
   "custom": {
     "modmenu": {
       "links": {
-        "modmenu.discord": "https://discord.com/invite/sA42pp6cuX"
+        "modmenu.discord": "https://discord.lieonlion.dev"
       }
+    },
+    "mc-publish": {
+      "modrinth": "J7YAdDyQ",
+      "curseforge": "1096916",
+      "dependencies": [
+        "fabric-api(required)#(ignore)"
+      ]
     }
   }
 }
