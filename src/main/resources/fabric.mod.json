@@ -22,9 +22,6 @@
     ],
     "client": [
       "de.pnku.mstv_mfrv.MoreFishingRodVariantsClient"
-    ],
-    "fabric-datagen": [
-      "de.pnku.mstv_mfrv.MoreFishingRodVariantDatagen"
     ]
   },
   "mixins": [

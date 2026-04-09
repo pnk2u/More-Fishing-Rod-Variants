@@ -39,10 +39,6 @@ loom {
 }
 
 fabricApi {
-	configureDataGeneration(){
-		setModId("mstv-mfrv")
-		client = true
-		createSourceSet = true
 	}
 }
 
