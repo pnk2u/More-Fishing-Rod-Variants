@@ -2,7 +2,7 @@ package de.pnku.mstv_mfrv.item;
 
 import de.pnku.mstv_base.item.MoreStickVariantItem;
 import de.pnku.mstv_mfrv.MoreFishingRodVariants;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -134,7 +134,7 @@ public class MoreFishingRodVariantItems {
     private static void registerFishingRodItem(Item fishingRodItem, Item fishingRodAfter, Item stickItem) {
         String fishingRodPath = ((MoreStickVariantItem) stickItem).mstvWoodType + "_fishing_rod";
         Registry.register(BuiltInRegistries.ITEM, MoreFishingRodVariants.asId(fishingRodPath), fishingRodItem);
-        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(entries -> entries.addAfter(fishingRodAfter, fishingRodItem));
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(entries -> entries.insertAfter(fishingRodAfter, fishingRodItem));
         more_fishing_rods.add(fishingRodItem);
         more_fishing_rod_sticks.put(fishingRodItem, stickItem);
         more_stick_fishing_rods.put(stickItem, fishingRodItem);
@@ -142,7 +142,7 @@ public class MoreFishingRodVariantItems {
     private static void registerBambooFishingRodItem(Item fishingRodItem, Item fishingRodAfter) {
         String fishingRodPath = "bamboo_fishing_rod";
         Registry.register(BuiltInRegistries.ITEM, MoreFishingRodVariants.asId(fishingRodPath), fishingRodItem);
-        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(entries -> entries.addAfter(fishingRodAfter, fishingRodItem));
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(entries -> entries.insertAfter(fishingRodAfter, fishingRodItem));
         more_fishing_rods.add(fishingRodItem);
     }
     private static void registerCarrotOnAStickItem(Item carrotOnAStickItem, Item carrotOnAStickAfter, Item stickItem) {
@@ -150,14 +150,14 @@ public class MoreFishingRodVariantItems {
         String article = "_a_"; if (stickWood.equals("acacia")) {article = "_an_";}
         String carrotOnAStickPath = "carrot_on" + article + stickWood + "_stick";
         Registry.register(BuiltInRegistries.ITEM, MoreFishingRodVariants.asId(carrotOnAStickPath), carrotOnAStickItem);
-        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(entries -> entries.addAfter(carrotOnAStickAfter, carrotOnAStickItem));
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(entries -> entries.insertAfter(carrotOnAStickAfter, carrotOnAStickItem));
         more_carrot_on_a_stick_variants.add(carrotOnAStickItem);
         more_carrot_on_a_stick_sticks.put(carrotOnAStickItem, stickItem);
     }
     private static void registerCarrotOnABambooItem(Item carrotOnAStickItem, Item carrotOnAStickAfter) {
         String carrotOnAStickPath = "carrot_on_a_bamboo_stick";
         Registry.register(BuiltInRegistries.ITEM, MoreFishingRodVariants.asId(carrotOnAStickPath), carrotOnAStickItem);
-        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(entries -> entries.addAfter(carrotOnAStickAfter, carrotOnAStickItem));
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(entries -> entries.insertAfter(carrotOnAStickAfter, carrotOnAStickItem));
         more_carrot_on_a_stick_variants.add(carrotOnAStickItem);
     }
     private static void registerWarpedFungusOnAStickItem(Item warpedFungusOnAStickItem, Item warpedFungusOnAStickAfter, Item stickItem) {
@@ -165,14 +165,14 @@ public class MoreFishingRodVariantItems {
         String article = "_a_"; if (stickWood.equals("acacia")) {article = "_an_";}
         String warpedFungusOnAStickPath = "warped_fungus_on" + article + stickWood + "_stick";
         Registry.register(BuiltInRegistries.ITEM, MoreFishingRodVariants.asId(warpedFungusOnAStickPath), warpedFungusOnAStickItem);
-        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(entries -> entries.addAfter(warpedFungusOnAStickAfter, warpedFungusOnAStickItem));
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(entries -> entries.insertAfter(warpedFungusOnAStickAfter, warpedFungusOnAStickItem));
         more_warped_fungus_on_a_stick_variants.add(warpedFungusOnAStickItem);
         more_warped_fungus_on_a_stick_sticks.put(warpedFungusOnAStickItem, stickItem);
     }
     private static void registerWarpedFungusOnABambooItem(Item warpedFungusOnAStickItem, Item warpedFungusOnAStickAfter) {
         String warpedFungusOnAStickPath = "warped_fungus_on_a_bamboo_stick";
         Registry.register(BuiltInRegistries.ITEM, MoreFishingRodVariants.asId(warpedFungusOnAStickPath), warpedFungusOnAStickItem);
-        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(entries -> entries.addAfter(warpedFungusOnAStickAfter, warpedFungusOnAStickItem));
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.TOOLS_AND_UTILITIES).register(entries -> entries.insertAfter(warpedFungusOnAStickAfter, warpedFungusOnAStickItem));
         more_warped_fungus_on_a_stick_variants.add(warpedFungusOnAStickItem);
     }
 
