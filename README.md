@@ -57,17 +57,19 @@
 ### Versions
 <a name="most-recent-version"></a>
 <!--CHANGELOG:START-->
-<a name="1.0.4"></a>
-#### 1.0.4[*](#footnote-*):
-- `1.21.4`: Update to 1.21.4
-- Add compatibility with [Tide](https://modrinth.com/mod/tide), providing the same functionality as the Vanilla Fishing Rod does when Tide is installed (including fishing, rod upgrading and rod smithing)
+<a name="1.1.2"></a>
+#### 1.1.2[*](#footnote-*):
+- `26.1`: Update to <ins>26.1</ins>
 
-<h2><sub><sub><sup><ins>Download 1.0.4 + 1.21(.1)</ins>:</sup>&#x200A;
-<a title="Download (Modrinth):&#10;More (Fishing) Rod Variants 1.0.4 + 1.21(.1)" href="https://modrinth.com/mod/more-fishing-rod-variants/version/RbBBeWgE">
-<img width=26 src="https://img.shields.io/badge/-%20-%230f91?style=flat&logo=modrinth"></a>
+<br></br>
+<sub>License update to [`CC-BY-NC-SA-4.0`](https://creativecommons.org/licenses/by-nc-sa/4.0/) (previously [`MIT`](https://choosealicense.com/licenses/mit))</sub>
+
+<h2><sub><sub><sup><ins>Download 1.1.2 + 1.21.4(-11)</ins>:</sup>&#x200A;
+<a title="Download (Modrinth):&#10;More (Fishing) Rod Variants 1.1.2 + 1.21.4(-11)" href="https://www.modrinth.com/mod/J7YAdDyQ/version/L1NEiqb0">
+<img width=26 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a>
 <sup><img width=7 height=10 src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/shared/pres/icon/separator_v.svg"></sup>
-<a title="Download (Curseforge):&#10;More (Fishing) Rod Variants 1.0.4 + 1.21(.1)" href="https://www.curseforge.com/minecraft/mc-mods/more-fishing-rod-variants/files/5939800">
-<img width=26 src="https://img.shields.io/badge/--%23f062?style=flat&logo=curseforge"></a>
+<a title="Download (Curseforge):&#10;1.1.2 + 1.21.4(-11) - More (Fishing) Rod Variants" href="https://www.curseforge.com/minecraft/mc-mods/more-fishing-rod-variants/files/7902049">
+<img width=26 src="https://img.shields.io/badge/--%23302a?style=flat&logo=curseforge"></a>
 </sub></sub></h2>
 
 <!--CHANGELOG:END-->
