@@ -14,7 +14,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import static de.pnku.mstv_mfrv.item.MoreFishingRodVariantItems.*;
+import static de.pnku.mstv_mfrv.item.MoreFishingRodVariantItems.more_carrot_on_a_stick_variants;
 
 @Mixin(Pig.class)
 public class PigMixin extends PathfinderMob {

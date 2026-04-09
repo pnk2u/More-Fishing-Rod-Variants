@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import static de.pnku.mstv_mfrv.item.MoreFishingRodVariantItems.*;
+import static de.pnku.mstv_mfrv.item.MoreFishingRodVariantItems.more_fishing_rods;
 
 @Mixin(FishingHook.class)
 public class FishingHookMixin {

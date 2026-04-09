@@ -6,7 +6,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.FishingRodItem;
 import net.minecraft.world.item.Item;
 
-import static de.pnku.mstv_mfrv.item.MoreFishingRodVariantItems.*;
+import static de.pnku.mstv_mfrv.item.MoreFishingRodVariantItems.more_fishing_rods;
 
 public class MfrvItemProperties {
 

@@ -5,10 +5,10 @@ import de.pnku.mstv_mfrv.MoreFishingRodVariants;
 import de.pnku.mstv_mfrv.item.compat.tide.TideFishingRodVariantItems;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.loader.api.FabricLoader;
+import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.*;
-import net.minecraft.core.Registry;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Map;
 
 import static de.pnku.mstv_base.item.MoreStickVariantItems.*;
-import static de.pnku.mstv_mfrv.MoreFishingRodVariants.*;
+import static de.pnku.mstv_mfrv.MoreFishingRodVariants.LOGGER;
 
 
 public class MoreFishingRodVariantItems {
