@@ -1,12 +1,11 @@
 <a name="1.1.3"></a>
 ### 1.1.3:
 - `26.1`: Add _Fisherman Villager_ trades for _Fishing Rod_ variants  
-  > This was formerly a feature of <ins>More Stick Variants (MStV)</ins> (&#x200A;<sub><a title="More Stick Variants (MStV)&#10;on Modrinth" href="https://modrinth.com/mod/more-stick-variants/"><img width=20 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a></sub><!--SEPARATOR_V:GH--><img width=7 height=10 src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/shared/pres/icon/separator_v.svg"><sub><a title="More Stick Variants (MStV)&#10;on Curseforge" href="https://www.curseforge.com/minecraft/mc-mods/more-stick-variants/"><img width=20 src="https://img.shields.io/badge/--%23302a?style=flat&logo=curseforge"></a></sub>&#x200A;) but with Minecraft <ins>26.1</ins>, _Villager_ trading has become data-driven allowing for each _More Variants_ mod to implement this feature for their respective block/item variants without needing to rely on <ins>MStV</ins> (&#x200A;<sub><a title="MStV&#10;on Modrinth" href="https://modrinth.com/mod/more-stick-variants/"><img width=20 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a></sub><!--SEPARATOR_V:GH--><img width=7 height=10 src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/shared/pres/icon/separator_v.svg"><sub><a title="MStV&#10;on Curseforge" href="https://www.curseforge.com/minecraft/mc-mods/more-stick-variants/"><img width=20 src="https://img.shields.io/badge/--%23302a?style=flat&logo=curseforge"></a></sub>&#x200A;) for this functionality.
+  > This was formerly a feature of <ins>More Stick Variants (MStV)</ins> (&#x200A;<sub><a title="More Stick Variants (MStV)&#10;on Modrinth" href="https://modrinth.com/mod/more-stick-variants/"><img width=20 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a>&#x200A;&#x200A;&#x200A;<a title="More Stick Variants (MStV)&#10;on Curseforge" href="https://www.curseforge.com/minecraft/mc-mods/more-stick-variants/"><img width=20 src="https://img.shields.io/badge/--%23302a?style=flat&logo=curseforge"></a></sub>&#x200A;) but with Minecraft <ins>26.1</ins>, _Villager_ trading has become data-driven allowing for each _More Variants_ mod to implement this feature for their respective block/item variants without needing to rely on <ins>MStV</ins> (&#x200A;<sub><a title="MStV&#10;on Modrinth" href="https://modrinth.com/mod/more-stick-variants/"><img width=20 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a>&#x200A;&#x200A;&#x200A;<a title="MStV&#10;on Curseforge" href="https://www.curseforge.com/minecraft/mc-mods/more-stick-variants/"><img width=20 src="https://img.shields.io/badge/--%23302a?style=flat&logo=curseforge"></a></sub>&#x200A;) for this functionality.
 
 <h2><sub><sub><sup><ins>Download 1.1.3 + 26.1</ins>:</sup>&#x200A;
 <a title="Download (Modrinth):&#10;More (Fishing) Rod Variants 1.1.3 + 26.1" href="https://www.modrinth.com/mod/J7YAdDyQ/version/ui6Fnto2">
-<img width=26 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a>
-<sup><img width=7 height=10 src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/shared/pres/icon/separator_v.svg"></sup>
+<img width=26 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a>&#x200A;
 <a title="Download (Curseforge):&#10;1.1.3 + 26.1 - More (Fishing) Rod Variants" href="https://www.curseforge.com/minecraft/mc-mods/more-fishing-rod-variants/files/7910861">
 <img width=26 src="https://img.shields.io/badge/--%23302a?style=flat&logo=curseforge"></a>
 </sub></sub></h2>
@@ -20,8 +19,7 @@
 
 <h2><sub><sub><sup><ins>Download 1.1.2 + 26.1</ins>:</sup>&#x200A;
 <a title="Download (Modrinth):&#10;More (Fishing) Rod Variants 1.1.2 + 26.1" href="https://www.modrinth.com/mod/J7YAdDyQ/version/OdbxtH3s">
-<img width=26 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a>
-<sup><img width=7 height=10 src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/shared/pres/icon/separator_v.svg"></sup>
+<img width=26 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a>&#x200A;
 <a title="Download (Curseforge):&#10;1.1.2 + 26.1 - More (Fishing) Rod Variants" href="https://www.curseforge.com/minecraft/mc-mods/more-fishing-rod-variants/files/7902057">
 <img width=26 src="https://img.shields.io/badge/--%23302a?style=flat&logo=curseforge"></a>
 </sub></sub></h2>
