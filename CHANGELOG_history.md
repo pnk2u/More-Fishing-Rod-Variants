@@ -1,3 +1,17 @@
+<a name="1.1.4"></a>
+### 1.1.4:
+- `1.21(.1)`, `1.21.4(-11)`, `26.1`: Fix requiring the highest compatible versions instead of the lowest one
+  - `1.21(.1)`: Minimum version: ~~<ins>1.21.1</ins>~~ → <ins>1.21</ins>
+  - `1.21.4(-11)`: Minimum version: ~~<ins>1.21.11</ins>~~ → <ins>1.21.4</ins>
+  - `26.1`: Minimum version: ~~<ins>26.1.2</ins>~~ → <ins>26.1</ins>
+
+<h2><sub><sub><sup><ins>Download 1.1.4 + 1.21.4(-11)</ins>:</sup>&#x200A;
+<a title="Download (Modrinth):&#10;More (Fishing) Rod Variants 1.1.4 + 1.21.4(-11)" href="https://www.modrinth.com/mod/J7YAdDyQ/version/gPq1Qe7E">
+<img width=26 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a>&#x200A;
+<a title="Download (Curseforge):&#10;1.1.4 + 1.21.4(-11) - More (Fishing) Rod Variants" href="https://www.curseforge.com/minecraft/mc-mods/more-fishing-rod-variants/files/7947632">
+<img width=26 src="https://img.shields.io/badge/--%23302a?style=flat&logo=curseforge"></a>
+</sub></sub></h2>
+
 <a name="1.1.3"></a>
 ### 1.1.3:
 - `26.1`: Add _Fisherman Villager_ trades for _Fishing Rod_ variants  
