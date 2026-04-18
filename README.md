@@ -66,8 +66,7 @@
 
 <h2><sub><sub><sup><ins>Download 1.1.2 + 1.21.4(-11)</ins>:</sup>&#x200A;
 <a title="Download (Modrinth):&#10;More (Fishing) Rod Variants 1.1.2 + 1.21.4(-11)" href="https://www.modrinth.com/mod/J7YAdDyQ/version/L1NEiqb0">
-<img width=26 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a>
-<sup><img width=7 height=10 src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/shared/pres/icon/separator_v.svg"></sup>
+<img width=26 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a>&#x200A;
 <a title="Download (Curseforge):&#10;1.1.2 + 1.21.4(-11) - More (Fishing) Rod Variants" href="https://www.curseforge.com/minecraft/mc-mods/more-fishing-rod-variants/files/7902049">
 <img width=26 src="https://img.shields.io/badge/--%23302a?style=flat&logo=curseforge"></a>
 </sub></sub></h2>
