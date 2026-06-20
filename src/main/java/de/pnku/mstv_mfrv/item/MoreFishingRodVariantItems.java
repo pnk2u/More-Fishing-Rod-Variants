@@ -6,8 +6,11 @@ import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.animal.pig.Pig;
+import net.minecraft.world.entity.monster.Strider;
 import net.minecraft.world.item.*;
 
 import java.util.ArrayList;
@@ -38,8 +41,14 @@ public class MoreFishingRodVariantItems {
         }
         switch (rodType) {
             case "fish" -> {return new FishingRodItem(rodProperties);}
-            case "pig" -> {return new FoodOnAStickItem<>(EntityType.PIG,7,rodProperties);}
-            case "strider" -> {return new FoodOnAStickItem<>(EntityType.STRIDER,1,rodProperties);}
+            case "pig" -> {
+                @SuppressWarnings("unchecked")
+                EntityType<Pig> pigEntityType = (EntityType<Pig>) BuiltInRegistries.ENTITY_TYPE.getOptional(Identifier.withDefaultNamespace(rodType)).orElseThrow();
+                return new FoodOnAStickItem<>(pigEntityType,7,rodProperties);}
+            case "strider" -> {
+                @SuppressWarnings("unchecked")
+                EntityType<Strider> striderEntityType = (EntityType<Strider>) BuiltInRegistries.ENTITY_TYPE.getOptional(Identifier.withDefaultNamespace(rodType)).orElseThrow();
+                return new FoodOnAStickItem<>(striderEntityType,1,rodProperties);}
             case null, default -> {return new Item(rodProperties);}
         }
     }
